@@ -6,7 +6,6 @@ import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 
 const AuthorItems = ({ authorImage, nftImag }) => {
-  console.log("@@")
   const { id } = useParams()
   const [author, setAuthor] = useState()
   const [collection, setCollection] = useState()
@@ -20,8 +19,6 @@ const AuthorItems = ({ authorImage, nftImag }) => {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${id}`
       );
-      console.log(data)
-      console.log(data.nftCollection)
       setAuthor(data)
       setCollection(data.nftCollection)
       setLoading(false);
