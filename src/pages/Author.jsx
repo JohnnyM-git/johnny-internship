@@ -23,8 +23,6 @@ const Author = () => {
     );
     setAuthor(data);
     setFollowers(data.followers);
-    console.log(followers);
-    console.log(data.nftCollection);
     setLoading(false);
   }
 
